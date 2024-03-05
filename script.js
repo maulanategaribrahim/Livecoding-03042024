@@ -41,40 +41,49 @@
 // } else {
 //     alert('okedeh goodluck')
 // }
-prompt('Siapa nama mu ?');
 
+prompt('Siapa nama mu ?');
 var studentWish = prompt('Mau masuk tidak ??');
 
 if(studentWish == 'mau'){
     var nilai = prompt('Berapa nilai akhir kamu SMA ?')
+    nilai =parseInt(nilai)
     var chanceGetUniv = Math.random() * 100
     chanceGetUniv = Math.floor(chanceGetUniv)
     if (nilai < 30){
         alert('Kamu tidak mungkin masuk');
     } 
-    else if (nilai < 50){
+    else{
+        var chanceGetUniv = Math.random() * 100
         if (nilai < 50) {
-            alert("Hmm, kemungkinan kamu kecil masuk univ: " + nilai +'%');
+            if(nilai < 50){
+            alert("Kemungkinan kamu kecil masuk univ: " + nilai +'%');
+            }
+            else{
+                alert("kemungkinan kamau masih bisa masuk univ" + nilai + '%')
+            }
         } 
-    } 
-    else if (nilai >= 50 && nilai <= 60){
-        var chanceGetUniv = Math.random() * 100;
-        chanceGetUniv = Math.floor(chanceGetUniv);
-        if (nilai > 70){
-            alert('Kamu pasti bisa masuk UNIV: ' + chanceGetUniv + nilai + '%');
+        
+        else if (nilai >= 60 && nilai <= 70){
+            alert('Kamu pasti bisa masuk UNIVy yakin deh: ' + nilai + '%');
         } 
-        else if (nilai > 80 || chanceGetUniv > 70){
-            var chanceGetUniv = Math.random() * 100;
-            chanceGetUniv = Math.floor(chanceGetUniv);
-            if (nilai> 70){
-                alert('Kamu bisa masuk UNIV: ' + chanceGetUniv + nilai + '%');
+        else if(nilai > 70 && nilai > 80){
+                alert('Kamu sangat bisa masuk UNIV: ' + nilai  + '%');
             }
         }
     }
-}
-else{
-    alert('okdedeh goodluck')
-}
+    else{
+        alert('okdedeh goodluck')
+    }
+    // else if (nilai >= 50 && nilai <= 60) {
+    //     if (chanceGetUniv > 70) {
+    //         alert('Kamu pasti bisa masuk UNIV: ' + chanceGetUniv + '%');
+    //     } 
+    //     else {
+    //         alert('Kamu memiliki kemungkinan masuk UNIV: ' + chanceGetUniv + '%');
+    //     }
+    // }
+
 
 
 
